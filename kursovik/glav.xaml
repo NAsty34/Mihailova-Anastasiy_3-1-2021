@@ -1,0 +1,109 @@
+﻿<Window x:Class="kursovik.glav"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursovik"
+        mc:Ignorable="d"
+        Title="glav" Height="1000" Width="722" Background="#C9DBE0" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Margin="0,0,0,0" Background="#9FCAD6">
+            <TextBlock FontSize="50" Width="202" Height="84"><Run Text="Новости"/></TextBlock>
+            <TextBlock FontSize="15" Margin="-200,30,10,10" Width="192">Осипова Д.Е.</TextBlock>
+            <TextBlock FontSize="30" Margin="180,0,30,0" Width="506" Height="41"><Run Text="Проверьте поставки"/></TextBlock>
+            <Image Source="Сотрудник.jpg" Height="98" Width="124" HorizontalAlignment="Center" Margin="-550,-83,10,10"/>
+            <TextBlock FontSize="15" Margin="-200,50,10,10" Width="192"><Run Text="Осипова Д.Е."/></TextBlock>
+            <TextBlock FontSize="30" Margin="180,0,30,0" Width="506" Height="41"><Run Text="Проверьте поставки"/></TextBlock>
+            <Image Source="/Сотрудник.jpg" Height="98" Width="124" Margin="-550,-83,10,10"/>
+        </StackPanel>
+        <Button  Width="150" Height="70" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,50,50,0" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Выйти" Click="Button_Click">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>#2DA0E1</Border.Background>
+                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" ></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Image Source="logo.png" Margin="30" Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image Source="vany.png" HorizontalAlignment="Center" VerticalAlignment="Top" Width="60" Margin="0,30,350,0" Stretch="Uniform" />
+        <TextBlock x:Name="FIO" Text="" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,80,0,0"></TextBlock>
+        <Button Margin="0,0,250,40" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Width="300" Height="80" FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Внести изменения" Click="Button_Click_1">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>
+                            <Brush>#2DA0E1</Brush>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock Text="ГЛАВНАЯ СТРАНИЦА" FontSize="40" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Margin="400,0,0,40" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Width="150" Height="80" FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Склад" Click="Button_Click_2">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>
+                            <Brush>#2DA0E1</Brush>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <!-- <Button Margin="531,46,56,853" FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Выйти" Click="Button_Click">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>#2DA0E1</Border.Background>
+                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" ></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock Margin="320,82,207,839" FontSize="30">Карман Е.Ю.</TextBlock>
+        <Image Source="vany.png" Margin="225,34,0,845" HorizontalAlignment="Left" Width="140"/>
+        <TextBlock FontSize="60" Margin="108,194,108,685">Главная страница</TextBlock>
+        <Button Margin="108,329,286,566" FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Внести изменения" Click="Button_Click_1">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>
+                            <Brush>#2DA0E1</Brush>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Margin="475,329,108,566" FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Отчёты" Click="Button_Click_2">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>
+                            <Brush>#2DA0E1</Brush>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <StackPanel Margin="0,497,0,0" Background="#9FCAD6">
+            <TextBlock FontSize="50" Width="202" Height="84"><Run Text="Новости"/></TextBlock>
+            <TextBlock FontSize="15" Margin="-200,30,10,10" Width="192">Осипова Д.Е.</TextBlock>
+            <TextBlock FontSize="30" Margin="180,0,30,0" Width="506" Height="41"><Run Text="Проверьте поставки"/></TextBlock>
+            <Image Source="Сотрудник.jpg" Height="98" Width="124" HorizontalAlignment="Center" Margin="-550,-83,10,10"/>
+            <TextBlock FontSize="15" Margin="-200,50,10,10" Width="192"><Run Text="Осипова Д.Е."/></TextBlock>
+            <TextBlock FontSize="30" Margin="180,0,30,0" Width="506" Height="41"><Run Text="Проверьте поставки"/></TextBlock>
+            <Image Source="/Сотрудник.jpg" Height="98" Width="124" Margin="-550,-83,10,10"/>
+        </StackPanel>-->
+
+    </Grid>
+</Window>

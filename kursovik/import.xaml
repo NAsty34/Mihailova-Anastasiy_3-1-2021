@@ -1,0 +1,29 @@
+﻿<Window x:Class="kursovik.import"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursovik"
+        mc:Ignorable="d"
+        Title="import" Height="450" Width="466.24" Background="#C9DBE0" >
+    <Grid>
+        <Image Source="logo.png" Margin="0,10,364,325" />
+        <TextBlock VerticalAlignment="Top" FontSize="40" Height="69" Margin="129,26,99,0">Quick Help</TextBlock>
+        <Button Background="#FFC9DBE0" BorderBrush="#FFC9DBE0" Click="Button_Click" Margin="376,14,10,343" >
+            <Image Source="krest.png"  />
+        </Button>
+
+        <TextBlock VerticalAlignment="Top" FontSize="30" Height="39" Margin="101,130,89,0"><Run Text="Прикрепить отчёт"/></TextBlock>
+        <TextBox Margin="30,190,22,106"></TextBox>
+        <Button FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Сохранить"  Margin="124,337,129,22" Click="Button_Click">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>#2DA0E1</Border.Background>
+                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" ></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

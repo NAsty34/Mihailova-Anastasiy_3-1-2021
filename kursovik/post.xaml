@@ -1,0 +1,59 @@
+﻿<Window x:Class="kursovik.post"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursovik"
+        mc:Ignorable="d"
+        Title="post" Height="482" Width="637" Background="#C9DBE0">
+    <Grid>
+        <Image Source="logo.png" Margin="10,18,513,345"/>
+        <TextBlock VerticalAlignment="Top" FontSize="40" Height="69" Width="218" Margin="201,38,210,0">Quick Help</TextBlock>
+        <Button Margin="525,25,21,356" Background="#FFC9DBE0" BorderBrush="#FFC9DBE0" Click="Button_Click" Foreground="{x:Null}">
+            <Image Source="krest.png"  />
+        </Button>
+        <Button Margin="108,380,355,10" FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Списать" Click="Button_Click_1">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>#2DA0E1</Border.Background>
+                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" ></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Margin="354,380,109,10" FontSize="30" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5" Content="Добавить" Click="Button_Click_2">
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="3" CornerRadius="13">
+                        <Border.Background>
+                            <Brush>#2DA0E1</Brush>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        
+
+        <DataGrid x:Name="DGRID" AutoGenerateColumns="False" IsReadOnly="True"  Margin="51,149,52,94" >
+            <DataGrid.Columns>
+                <DataGridTextColumn  Binding="{Binding Name}" Header="Название" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Form}" Header="Форма выпуска" Width="130"/>
+                <DataGridTextColumn  Binding="{Binding ShelfLife}" Header="Срок годности" Width="100"/>
+                <DataGridTextColumn  Binding="{Binding Price}" Header="Цена" Width="90"/>
+                <DataGridTextColumn  Binding="{Binding Amount}" Header="Количество" Width="200"/>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Margin="5" Width="175" Height="30" VerticalAlignment="Center" BorderBrush="Black" Background="#2DA0E1" BorderThickness="5"  Click="BtnEdit1_click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Window>
