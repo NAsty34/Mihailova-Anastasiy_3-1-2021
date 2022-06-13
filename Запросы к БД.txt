@@ -1,0 +1,16 @@
+1. Добавление
+INSERT INTO [Medicine].[dbo].[Medic] (Name, Form, Amount, Price, ShelfLife, ShelfLife2, Type) 
+VALUES ('Нафтизин', 'Капли','50','57','23-05-2022','22-05-2025','Назальные капли');
+select *
+from [Medicine].[dbo].[Medic];
+2. Обновление
+update [Medicine].[dbo].[Medic] 
+set Price ='30'
+where Type='Назальные капли';
+select *
+from [Medicine].[dbo].[Medic];
+3. Удаление
+delete from [Medicine].[dbo].[Medic]
+where Id_medic = 1;
+select *
+from [Medicine].[dbo].[Medic];
